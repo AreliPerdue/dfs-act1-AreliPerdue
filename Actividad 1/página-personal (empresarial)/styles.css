@@ -1,0 +1,66 @@
+/* importar nueva fuente*/
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    }
+
+h1 {
+    margin: 0;
+    font-size: 5em;
+    .bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+}
+header div {
+    height: 200px;
+}
+header {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;  
+    font-family:"Bebas Neue", sans-serif;
+    font-size: 40px;
+    text-align: justify;
+    height: 200px;
+}
+
+#nombre-de-compañia div {
+    margin-right: 20px;
+}
+
+.header-content {
+    align-items: center;
+    justify-content: flex end;
+    display: flex;
+    padding-left: 5px;
+    height: 200px;
+}
+
+#descripcion-el-fuelle {
+    padding: 10px;
+    font-size: 30px;
+}
+#proyectos div {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+
+img {
+    border-radius: 8px;
+}
