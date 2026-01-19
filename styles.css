@@ -1,4 +1,3 @@
-/*---------------- HEADER ------------------*/
 /* importar nueva fuente*/
 .bebas-neue-regular {
     font-family: "Bebas Neue", sans-serif;
@@ -6,6 +5,7 @@
     font-style: normal;
     }
 
+/*---------------- HEADER ------------------*/
 .header-content {
     margin: 0;
     padding: 0;
@@ -24,9 +24,7 @@
 
 .left {
     width: 200px;
-    /* flex-grow: 1 allows this column to grow and take up all remaining space */
     flex-grow: 1; 
-    /* Alternatively, you can use flex: 1; for the same effect */
     font-size: 100px;
 }
 
@@ -43,14 +41,35 @@
     padding: 0;
 }
 
+@media (max-width: 768px) {
+    .header-content {
+    flex-direction: column;   /* apila título y texto */
+    align-items: center;      /* centra todo */
+    text-align: center;
+    }
+
+    .header-content .left {
+    font-size: 60px;          /* reduce tamaño del título */
+    width: auto;              /* evita desbordes */
+    }
+
+    .header-content .right {
+    flex-basis: auto;         /* deja que se ajuste */
+    font-size: 20px;          /* texto más legible en móvil */
+    padding: 10px;
+    text-align: center;
+    }
+}
+
 /*---------------- PROYECTOS ------------------*/
 #proyectos {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 10px;
-    font-family: century-gothic, sans-serif;
+    font-family: "Bebas Neue", sans-serif;
     text-align: justify;
+    font-size: 20px;
 }
 
 
@@ -78,62 +97,79 @@
     font-family: "Bebas Neue", sans-serif;
 }
 
+#proyectos div:nth-child(1):hover,
+#proyectos div:nth-child(2):hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
 /*---------------- PROYECTO RESPONSIVO ------------------*/
 @media (max-width: 768px) {
-    .proyecto {
-        flex-direction: column;
-        text-align: center;
+    #proyectos {
+    flex-direction: column;   /* ✅ apila los proyectos */
+    align-items: center;      /* ✅ centra el contenido */
     }
 
-    .proyecto img {
-        width: 100%;
+    #proyectos div {
+    flex-basis: 100%;         /* ✅ cada proyecto ocupa todo el ancho */
+    max-width: 90%;          /* ✅ evita que se desborde */
+    margin-bottom: 20px;
     }
 
-    .proyecto .texto {
-        text-align: center;
+    #proyectos img {
+    width: 90%;              /* ✅ imagen se ajusta al ancho disponible */
+    height: auto;             /* ✅ mantiene proporción */
     }
 }
+
 
 /*---------------- PROXIMAMENTE ------------------*/
 #Proximamente {
-  padding: 40px 20px;
-  font-family: century-gothic, sans-serif;
+    padding: 40px 20px;
+    font-family: "Bebas Neue", sans-serif;
 }
 
 #Proximamente h2 {
-  text-align: center;
-  font-size: 48px;
-  font-family: "Bebas Neue", sans-serif;
-  margin-bottom: 40px;
+    text-align: center;
+    font-size: 48px;
+    font-family: "Bebas Neue", sans-serif;
+    margin-bottom: 40px;
 }
 
 #Proximamente .proyecto {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 20px;
-  margin-bottom: 30px;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    background-color: transparent;
 }
 
 #Proximamente img {
-  width: 300px;
-  height: auto;
-  border-radius: 12px;
+    width: 300px;
+    height: auto;
+    border-radius: 12px;
 }
 
 #Proximamente .texto {
-  flex: 1;
-  text-align: justify;
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: justify;
+    background-color: transparent; 
+    box-shadow: none;
+    padding: 0;
 }
 
 #Proximamente h3 {
-  font-size: 36px;
-  font-family: "Bebas Neue", sans-serif;
-  margin-bottom: 10px;
+    font-size: 36px;
+    font-family: "Bebas Neue", sans-serif;
+    margin-bottom: 10px;
 }
 
 
@@ -155,75 +191,125 @@
 
 /*---------------- MISION/VISION ------------------*/
 #mission-vision {
-  padding: 40px 20px;
+    padding: 40px 20px;
 }
 
-#mission-vision .block {
-  background-color: black;
-  color: white;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+#mission-vision .card {
+    background-color: black;
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
 }
 
 #mission-vision h2 {
-  font-size: 36px;
-  font-family: "Bebas Neue", sans-serif;
-  margin-bottom: 15px;
-  text-align: center;
+    font-size: 36px;
+    font-family: "Bebas Neue", sans-serif;
+    margin-bottom: 15px;
+    text-align: center;
 }
 
 #mission-vision p {
-  font-size: 18px;
-  line-height: 1.6;
-  text-align: justify;
-  margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 30px;
 }
-
-
 
 /*---------------- CONTACTO ------------------*/
-#contacto
-{
+#contacto {
     padding: 20px;
     font-family: century-gothic, sans-serif;
-    text-align: justify;
+    text-align: center; /* centramos mejor el contenido */
 }
 
-#contacto h
-{
+#contacto h2 {
     font-size: 30px;
     font-family: "Bebas Neue", sans-serif;
+    margin-bottom: 20px;
+    color: black; /* puedes ajustar según tu diseño */
 }
 
 #contacto p {
     font-size: 18px;
     line-height: 1.6;
 }
+
+/* Botón estilizado */
+.contact-btn {
+    background-color: black;
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 28px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 40px auto;
+    text-align: center;
+    display: block;
+    transition: background-color 0.3s ease;
+    text-decoration: none; /* elimina cualquier subrayado heredado */
+    transition: background-color 0.3s ease;
+}
+
+/* Estados de interacción */
+.contact-btn:hover {
+    transform: scale(1.05); /* ✅ animación suave */
+    background-color: #333;
+}
+
+
+.contact-btn:focus,
+.contact-btn:active {
+    outline: none;
+    box-shadow: none;
+}
+
+#contacto {
+    text-align: center;
+    width: 100%;
+    padding: 40px 0;
+}
+
+
 /*---------------- FOOTER ------------------*/
-footer {
+footer,
+.site-footer {
     background-color: black;
     color: white;
     text-align: center;
-    padding: 10px;
-    font-family: century-gothic, sans-serif;
+    padding: 20px 10px;         /* ✅ más comprimido */
+    font-family: "Bebas Neue", sans-serif;
+    width: 100%;
 }
-footer p {
-    margin: 0;
-    font-size: 14px;
+
+.site-footer .container {
+    max-width: 800px;
+    margin: 0 auto;
 }
-footer a {
-    color: white;
+
+.site-footer p,
+.site-footer li {
+    font-size: 16px;
+    margin: 6px 0;
+    color: white;               /* ✅ fuerza texto blanco */
+}
+
+.site-footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.site-footer a {
+     color: white !important;    /* ✅ evita azul/morado en enlaces */
     text-decoration: none;
 }
-footer a:hover {
+
+.site-footer a:hover {
     text-decoration: underline;
 }
-footer
-    .bebas-neue-regular {
-        font-family: "Bebas Neue", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-    }
+
 
 
