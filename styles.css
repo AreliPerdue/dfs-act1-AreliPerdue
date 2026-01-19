@@ -1,0 +1,229 @@
+/*---------------- HEADER ------------------*/
+/* importar nueva fuente*/
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    }
+
+.header-content {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    display: flex; /* Activa flexbox */
+    justify-content: space-between; /* distribuir el espacio entre las columnas */
+    gap: 20px; /* añadir espacios entre columnas */
+}
+
+.column {
+    padding: 15px;
+}
+
+.left {
+    width: 200px;
+    /* flex-grow: 1 allows this column to grow and take up all remaining space */
+    flex-grow: 1; 
+    /* Alternatively, you can use flex: 1; for the same effect */
+    font-size: 100px;
+}
+
+.right {
+    flex-basis: 750px; /* especificar el width de la columna */
+    flex-shrink: 0; /* flex-shrink: 0 previene que se haga muy pequeño*/
+    font-size: 30px;
+    text-align: justify;
+}
+
+.header-content h1,
+.header-content p {
+    margin: 0;
+    padding: 0;
+}
+
+/*---------------- PROYECTOS ------------------*/
+#proyectos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+    font-family: century-gothic, sans-serif;
+    text-align: justify;
+}
+
+
+#proyectos div {
+  flex-basis: 48%; /* or 48% for tighter layout */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+#proyectos img {
+    max-width: 100%;
+    height: 300px;
+    border-radius: 15px;
+    display: block;       /* makes the image a block element */
+    margin: 0 auto;       /* centers horizontally */
+}
+
+
+#proyectos h3 {
+    text-align: center;
+    font-size: 40px;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+/*---------------- PROYECTO RESPONSIVO ------------------*/
+@media (max-width: 768px) {
+    .proyecto {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .proyecto img {
+        width: 100%;
+    }
+
+    .proyecto .texto {
+        text-align: center;
+    }
+}
+
+/*---------------- PROXIMAMENTE ------------------*/
+#Proximamente {
+  padding: 40px 20px;
+  font-family: century-gothic, sans-serif;
+}
+
+#Proximamente h2 {
+  text-align: center;
+  font-size: 48px;
+  font-family: "Bebas Neue", sans-serif;
+  margin-bottom: 40px;
+}
+
+#Proximamente .proyecto {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  background-color: #fff;
+}
+
+#Proximamente img {
+  width: 300px;
+  height: auto;
+  border-radius: 12px;
+}
+
+#Proximamente .texto {
+  flex: 1;
+  text-align: justify;
+}
+
+#Proximamente h3 {
+  font-size: 36px;
+  font-family: "Bebas Neue", sans-serif;
+  margin-bottom: 10px;
+}
+
+
+/*---------------- RESPONSIVO ------------------*/
+@media (max-width: 768px) {
+    #Proximamente .proyecto {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #Proximamente img {
+        width: 100%;
+    }
+
+    #Proximamente .texto {
+        text-align: center;
+    }
+}
+
+/*---------------- MISION/VISION ------------------*/
+#mission-vision {
+  padding: 40px 20px;
+}
+
+#mission-vision .block {
+  background-color: black;
+  color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+#mission-vision h2 {
+  font-size: 36px;
+  font-family: "Bebas Neue", sans-serif;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+#mission-vision p {
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: justify;
+  margin-bottom: 30px;
+}
+
+
+
+/*---------------- CONTACTO ------------------*/
+#contacto
+{
+    padding: 20px;
+    font-family: century-gothic, sans-serif;
+    text-align: justify;
+}
+
+#contacto h
+{
+    font-size: 30px;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+#contacto p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+/*---------------- FOOTER ------------------*/
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-family: century-gothic, sans-serif;
+}
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+footer a {
+    color: white;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+footer
+    .bebas-neue-regular {
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+
