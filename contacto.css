@@ -99,3 +99,19 @@ input[type="submit"]:hover {
         padding: 8px;
     }
 }
+
+@media (max-width: 360px) {
+    form {
+        padding: 10px;
+        margin: 0 5px;
+    }
+
+    input, textarea {
+        font-size: 12px;
+    }
+
+    input[type="submit"] {
+        font-size: 14px;
+        padding: 6px;
+    }
+}

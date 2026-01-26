@@ -97,9 +97,9 @@
     font-family: "Bebas Neue", sans-serif;
 }
 
-#proyectos div:nth-child(1):hover,
-#proyectos div:nth-child(2):hover {
-    transform: scale(1.05);
+#proyectos :hover,
+#proyectos :hover {
+    transform: scale(1.01);
     box-shadow: 0 8px 20px rgba(0,0,0,0.6);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -406,11 +406,18 @@ textarea::-ms-input-placeholder {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: none;
-    background: none;
+    background-color: transparent;
     padding: 15px;
     text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1); /* sombra base muy ligera */
 }
+
+.card:hover {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* apenas más intensa */
+}
+
+
 
 /* Imagen del producto */
 .card img {
@@ -450,7 +457,13 @@ textarea::-ms-input-placeholder {
     font-size: 18px;
     border-radius: 8px;
     cursor: pointer;
+    transition: background-color 0.2s ease;
 }
+
+.agregar:hover {
+    background-color: #333; /* cambio de color suave */
+}
+
 
 /* Botones dentro del carrito */
 #orders button {
@@ -463,9 +476,129 @@ textarea::-ms-input-placeholder {
     border-radius: 6px;
     cursor: pointer;
     margin-right: 10px;
+    transition: background-color 0.2s ease;
 }
+
+#orders button:hover {
+    background-color: #444; /* gris un poco más claro */
+}
+
 
 /* Sin animación ni cambio de color al pasar el mouse */
 #orders button:hover {
-    background-color: gray;
+    background-color: #555;
+    transform: translateY(-1px);
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
+
+@media (max-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    main {
+        flex: 1;
+    }
+
+    #ordenes {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 20px;
+        width: 100%;
+        box-sizing: border-box;
+        gap: 25px; /* separación clara entre menú y carrito */
+    }
+
+    .productos,
+    .carrito {
+        width: 100%;
+        max-width: 100%;
+        padding: 15px;
+        box-sizing: border-box;
+        border-radius: 12px;
+    }
+
+    .grid-productos {
+        grid-template-columns: 1fr; /* una sola columna en móvil */
+        gap: 15px;
+    }
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: none;
+    padding: 15px;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+
+    .card input,
+    .agregar {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .carrito ul li {
+        font-size: 16px;
+        word-wrap: break-word;
+    }
+
+    #orders button {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    footer,
+    .site-footer {
+        margin-top: 40px; /* separación extra respecto al carrito */
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 480px) {
+    .productos h2,
+    .carrito h3 {
+        font-size: 22px;
+    }
+
+    .card h4 {
+        font-size: 18px;
+    }
+
+    .contact-btn {
+        font-size: 18px;
+        padding: 8px 16px;
+    }
+
+    .site-footer p,
+    .site-footer li {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .card:hover {
+        transform: none;       /* elimina el crecimiento */
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* sombra ligera */
+    }
+}
+@media (max-width: 768px) {
+    .card:hover {
+        transform: scale(1.01); /* apenas perceptible */
+    }
+}
+
