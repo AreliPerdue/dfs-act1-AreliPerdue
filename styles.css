@@ -374,7 +374,7 @@ textarea::-ms-input-placeholder {
     color: black;
 }
 
-./* Tarjetas en cuadrícula sin fondo ni borde extra */
+/* Tarjetas en cuadrícula sin fondo ni borde extra */
 .grid-productos {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -569,5 +569,23 @@ textarea::-ms-input-placeholder {
     .site-footer p,
     .site-footer li {
         font-size: 14px;
+    }
+}
+/* Estilo base: escritorio */
+.grid-productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas en desktop */
+    gap: 30px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilo para pantallas pequeñas */
+@media (max-width: 768px) {
+    .grid-productos {
+        grid-template-columns: 1fr; /* solo 1 columna en móvil */
+        gap: 15px;
     }
 }
