@@ -1,0 +1,101 @@
+body {
+    font-family: century-gothic, sans-serif;
+    background-color: black;
+    padding: 40px;
+    margin: 0;
+}
+
+h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 48px;
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    background-color: black;
+    color: white;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 20px;
+    padding: 12px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #333;
+    transform: scale(1.05);
+}
+
+/* 📱 Responsividad */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    form {
+        padding: 20px;
+        width: 100%;
+    }
+
+    input, textarea {
+        font-size: 14px;
+    }
+
+    input[type="submit"] {
+        font-size: 18px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 28px;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    input, textarea {
+        font-size: 13px;
+    }
+
+    input[type="submit"] {
+        font-size: 16px;
+        padding: 8px;
+    }
+}

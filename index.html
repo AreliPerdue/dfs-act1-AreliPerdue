@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Füelle</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
@@ -105,6 +105,76 @@
             </button>
     </section>
 
+    <section id="ordenes">
+    <!-- Tarjetas de productos (2/3 del ancho) -->
+    <div class="productos">
+        <h2>Haz tu orden</h2>
+        <div class="grid-productos">
+
+        <!-- Burrito de picadillo -->
+        <div class="card" data-producto="Burrito de picadillo">
+            <img src="Imagenes/Burritos.jpeg" alt="Burrito de picadillo">
+            <h4>Burrito de picadillo</h4>
+            <input type="number" value="1" min="1" class="cantidad">
+            <input type="text" placeholder="Notas (ej. sin frijoles)" class="nota">
+            <button class="agregar">Agregar</button>
+        </div>
+
+        <!-- Burrito de deshebrada -->
+        <div class="card" data-producto="Burrito de deshebrada">
+            <img src="Imagenes/BurritoDeshebrada.jpeg" alt="Burrito de deshebrada">
+            <h4>Burrito de deshebrada</h4>
+            <input type="number" value="1" min="1" class="cantidad">
+            <input type="text" placeholder="Notas (ej. sin frijoles)" class="nota">
+            <button class="agregar">Agregar</button>
+        </div>
+
+        <!-- Burrito de chicharrón -->
+        <div class="card" data-producto="Burrito de chicharrón">
+            <img src="Imagenes/BurritosChicharrón.jpeg" alt="Burrito de chicharrón">
+            <h4>Burrito de chicharrón</h4>
+            <input type="number" value="1" min="1" class="cantidad">
+            <input type="text" placeholder="Notas (ej. sin frijoles)" class="nota">
+            <button class="agregar">Agregar</button>
+        </div>
+
+        <!-- Burrito de papa con chorizo -->
+        <div class="card" data-producto="Burrito de papa con chorizo">
+            <img src="Imagenes/burritoPapasChorizo.jpeg" alt="Burrito de papa con chorizo">
+            <h4>Burrito de papa con chorizo</h4>
+            <input type="number" value="1" min="1" class="cantidad">
+            <input type="text" placeholder="Notas (ej. sin frijoles)" class="nota">
+            <button class="agregar">Agregar</button>
+        </div>
+
+        <!-- Queso en barra 1 Kg -->
+        <div class="card" data-producto="Queso en barra 1 Kg">
+            <img src="Imagenes/QuesoBarra.png" alt="Queso en barra 1 Kg">
+            <h4>Queso en barra 1 Kg</h4>
+            <input type="number" value="1" min="1" class="cantidad">
+            <input type="text" placeholder="Notas (ej. sin frijoles)" class="nota">
+            <button class="agregar">Agregar</button>
+        </div>
+
+        <!-- Queso rallado 500g -->
+        <div class="card" data-producto="Queso rallado 500g">
+            <img src="Imagenes/Queso.jpg" alt="Queso rallado 500g">
+            <h4>Queso rallado 500g</h4>
+            <input type="number" value="1" min="1" class="cantidad">
+            <input type="text" placeholder="Notas (ej. sin frijoles)" class="nota">
+            <button class="agregar">Agregar</button>
+        </div>
+
+        </div>
+    </div>
+
+    <!-- Carrito (1/3 del ancho) -->
+    <div class="carrito">
+        <h3>Artículos de tu orden:</h3>
+        <ul id="orders"></ul>
+    </div>
+    </section>
+
     <footer class="site-footer">
     <div class="container">
     <p>Contacto:</p>
@@ -116,6 +186,8 @@
         <p>&copy; 2025 EL FÜELLE. TODOS LOS DERECHOS RESERVADOS.</p>
     </div>
     </footer>
+
+    <script src="app.js"></script>
 
 </body>
 </html>
