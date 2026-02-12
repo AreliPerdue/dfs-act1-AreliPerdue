@@ -1,3 +1,5 @@
+//equivalente a db.js visto en clase.
+
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 
