@@ -1,0 +1,31 @@
+name: Node.js CI   # This is just a label, shows up in GitHub Actions tab
+
+on:
+  push:            # Triggers when you push code
+    branches: [ "main" ]   # Only runs on the main branch
+  pull_request:    # Also runs when you open a PR into main
+    branches: [ "main" ]
+
+jobs:
+  build:           # A "job" is a set of steps that run together
+    runs-on: ubuntu-latest   # GitHub gives you a Linux VM to run on
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        # This pulls your repo code into the VM
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+        # This installs Node.js v22 (same as your local version)
+
+      - name: Install dependencies
+        run: npm install
+        # Runs npm install to get express, mongoose, etc.
+
+      - name: Run tests
+        run: npm test
+        # If you have tests defined in package.json, they run here.
+        # If not, this step will fail unless you remove it.
