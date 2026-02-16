@@ -34,5 +34,12 @@
     "dotenv-cli": "^11.0.0",
     "jest": "^30.2.0",
     "supertest": "^7.2.2"
-  }
+  },
+  "jest": {
+  "testMatch": ["<rootDir>/backend/tests/**/*.test.js"],
+  "transform": {
+    "^.+\\.js$": "babel-jest"
+  },
+  "testPathIgnorePatterns": ["/node_modules/"]
+}
 }
