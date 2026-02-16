@@ -3,29 +3,30 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import productRoutes from './routes/productRoutes.js';
 import authRoutes from './routes/authRoutes.js';
+import userRoutes from './routes/userRoutes.js';
 
 dotenv.config();
-const app = express();
+console.log('MONGO_URI:', process.env.MONGO_URI);
 
-// Middleware para parsear JSON
+const app = express();
 app.use(express.json());
 
 // Rutas
 app.use('/api/products', productRoutes);
 app.use('/api/auth', authRoutes);
+app.use('/api/users', userRoutes);
 
 // Conexión a MongoDB Atlas
-mongoose.connect(process.env.MONGO_URI)
-    .then(() => console.log('✅ MongoDB conectado'))
-    .catch(err => console.error('❌ Error al conectar MongoDB:', err));
+mongoose.connect(process.env.MONGO_URI, {
+  serverSelectionTimeoutMS: 5000,
+})
+  .then(() => console.log('✅ MongoDB conectado'))
+  .catch(err => console.error('❌ Error al conectar MongoDB:', err));
 
-// Solo escuchar en local, no en Vercel
-if (process.env.NODE_ENV !== 'production') {
-    const PORT = process.env.PORT || 3000;
-    app.listen(PORT, () => {
-        console.log(`🚀 Servidor corriendo en puerto ${PORT}`);
-    });
-}
+// Arranque del servidor
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`🚀 Servidor corriendo en puerto ${PORT}`);
+});
 
-// Exportar app para Vercel
 export default app;
