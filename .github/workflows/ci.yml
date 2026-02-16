@@ -23,9 +23,11 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-        # Runs npm install to get express, mongoose, etc.
+        working-directory: ./backend
+        # This installs all dependencies defined in backend/package.json
 
       - name: Run tests
         run: npm test
+        working-directory: ./backend
         # If you have tests defined in package.json, they run here.
         # If not, this step will fail unless you remove it.
