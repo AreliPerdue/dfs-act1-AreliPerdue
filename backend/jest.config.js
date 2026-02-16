@@ -1,8 +1,9 @@
 export default {
     testEnvironment: 'node',
-    transform: { '^.+\\.js$': 'babel-jest' },
-    setupFiles: ['dotenv/config']
-}
+    transform: {}
+};
+Files: ['dotenv/config']
+
 module.exports = {
 projects: [
     {
